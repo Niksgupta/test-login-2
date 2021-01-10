@@ -5,7 +5,7 @@ import {Form, Col, Button} from "react-bootstrap";
 import {useHistory, Link} from "react-router-dom"
 
 import {auth} from "./firebase"
-
+import connect from "../assets/connect.jpg"
 import "./Main.css";
 import "../App.css"
 
@@ -105,7 +105,7 @@ function Main() {
               <div className = "content-1">
                 <p className="text-p">Facebook helps you to share and conncect with your friends</p>
 
-                <img src="#" className="connect-img" alt="logo"/>
+                <img src={connect} className="connect-img" alt="logo"/>
                </div>
                    
                <div className = "content-2">
