@@ -33,7 +33,7 @@ const  App =()=> {
     <div className="App">
 
       {darkmode.showWidget()}
-      
+
       <Router>
         <Switch>
         <Route exact path="/">
@@ -43,7 +43,7 @@ const  App =()=> {
           <Feed />
           </Route>
           <Route  path="/Login">
-          <Login />
+          <Login user= {user}/>
           </Route>
           <Route  path="/Register">
           <Register />

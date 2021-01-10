@@ -8,15 +8,17 @@ function Feed(){
    const history = useHistory('');
 
   const logout =(event)=>{
+    console.log(displayName)
+
     auth.signOut();
     history.push("/Login")
-
   }
 
 
    
   return(
-    <div><h1>feed here </h1>
+    <div><h1>feed here  </h1>
+    
     <button type= "button" onClick = {logout} >Logout</button>
     </div>
   )
