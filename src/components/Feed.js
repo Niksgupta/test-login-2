@@ -8,7 +8,7 @@ function Feed(){
    const history = useHistory('');
 
   const logout =(event)=>{
-    console.log(displayName)
+   
 
     auth.signOut();
     history.push("/Login")
