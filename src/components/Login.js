@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import firebase from "./firebase"
 import "firebase/auth";
 import "firebase/firestore";
 import {auth} from "./firebase"

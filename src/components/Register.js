@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import firebase from "./firebase"
 import {useHistory, Link} from "react-router-dom"
 import {Form, Button, Col} from "react-bootstrap"
 import { auth } from "./firebase";
@@ -18,6 +17,8 @@ function Register(){
 
     auth.createUserWithEmailAndPassword(email, password)
     .then((auth)=>{
+      console.log(gender)
+
       if(auth.user){
         auth.user.updateProfile({
           displayName: firstname + " " + lastname
@@ -121,7 +122,10 @@ function Register(){
             </Form.Group>
           </Form.Row>
           <Form.Group>
-              <input type="checkbox" required feedback="You must agree before submitting." /> 
+            
+              <input type="checkbox" required 
+               onChange = {(e)=> setGender(e.target.value)}
+              feedback="You must agree before submitting." /> 
               <label className="agree">Agree to terms and conditions </label>
           </Form.Group>
 

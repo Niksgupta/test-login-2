@@ -1,17 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
 import {HashRouter as Router, Switch, Route} from "react-router-dom"
 
 import Main from "./components/Main"
 import Feed from "./components/Feed"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import Darkmode from "darkmode-js";
+import { auth } from "./components/firebase";
 
 
 
 
-export default function App() {
+const  App =()=> {
+
+  const options = {
+    label: "🌓",
+    time: "0.5s",
+  };
+  const darkmode = new Darkmode(options);
+  
+  const [user, setUser] = useState([]);
+  auth.onAuthStateChanged((authUser) =>{
+    if(authUser){
+      setUser(authUser)
+    } else{
+      setUser(false);
+    }
+  })
+
   return (
+    
     <div className="App">
+
+      {darkmode.showWidget()}
+      
       <Router>
         <Switch>
         <Route exact path="/">
@@ -31,3 +53,4 @@ export default function App() {
     </div>
   );
 }
+export default App;

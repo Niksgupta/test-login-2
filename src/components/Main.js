@@ -1,13 +1,11 @@
 import React, {useState} from 'react'
-import firebase from "./firebase"
 import "firebase/auth";
 import "firebase/firestore";
 import {Form, Col, Button} from "react-bootstrap";
 import {useHistory, Link} from "react-router-dom"
 
 import {auth} from "./firebase"
-import Feed from "./Feed"
-import Register from "./Register"
+
 import "./Main.css";
 import "../App.css"
 
