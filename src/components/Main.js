@@ -62,7 +62,7 @@ function Main() {
               <div className="head">
                 
             
-    <Form onClick= {login}>
+    <Form onSubmit = {login}>
               <Form.Row className="align-items-center">
     
                 <Col sm={5} className="my-1" >
